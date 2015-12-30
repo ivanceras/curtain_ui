@@ -8,8 +8,8 @@ var db_url = m.prop(session_db_url);
 
 
 //var api_endpoint = "http://45.55.7.231:8080";//production
-var api_endpoint = "http://localhost:8181"; //dev
-//var api_endpoint = "https://iron-curtain.herokuapp.com"; //heroku
+//var api_endpoint = "http://localhost:8181"; //dev
+var api_endpoint = "https://iron-curtain.herokuapp.com"; //heroku
 
 function xhr_config(xhr){
     var value = db_url();
