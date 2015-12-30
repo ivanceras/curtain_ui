@@ -1,0 +1,13 @@
+{
+  "name": "Curtain UI",
+  "version": "0.0.2",
+  "main": "index.html",
+   "window": {
+   		"title": "Curtain UI",
+        "frame": true,
+        "toolbar": false,
+        "icon": "curtain.png",
+        "width": 1200,
+        "height": 600
+    }
+}

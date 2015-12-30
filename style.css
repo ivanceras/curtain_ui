@@ -1,0 +1,155 @@
+table > tr > th,td.labels {
+	white-space: nowrap;
+	text-align: right;
+	padding-right: 20px;
+}
+
+
+table > tbody > tr.records > td {
+	padding-right: 20px;
+	border-right: 1px solid #e0e0e0;
+}
+
+table > tbody > tr.field_group > td {
+	padding-right: 20px;
+}
+
+/*the tabs is left justified with an underline*/
+.left_justified{
+	justify-content: flex-start;
+	border-bottom: 1px solid #a0a0a0!important;
+	/*width: 600px;*/
+	/*background-color: #f0f0f0;*/
+}
+.extension_tab{
+	border: 0px solid #e0e0e0;
+}
+.main_tab{
+	padding-left: 20px;
+}
+
+
+
+a.mini_icon{
+	min-width:20px;
+}
+
+
+.list_view{
+	max-width: 1600px;
+	overflow-x: auto;
+	min-height: 600px;
+	overflow-y: hidden;
+	padding-bottom:10px;
+}
+.extension_tab{
+	margin-top: 40px;
+	padding-left: 10px;
+	margin-bottom: 10px;
+	margin-right:40px;
+}
+.many_tabs{
+	margin-top: 40px;
+	margin-bottom: 50px;
+	margin-right:40px;
+	padding-bottom: 50px;
+}
+
+a.main_toolbar--icon{
+	padding-top:5px;
+	margin-left:10px;
+	min-width:20px;
+}
+
+
+/* main toolbar of the window */
+.main_toolbar--detached{
+	position: fixed;
+	z-index: 10000;
+	background-color: white;
+	width:100%;
+	margin-left: -20px;
+	padding-left: 20px;
+	top:0px;
+	animation-name: detach;
+  animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	transition-timing-function: ease-in;
+}
+
+@keyframes detach {
+    from {top: -10px;}
+    to {top: 0px;}
+}
+
+.main_toolbar--inplaced{
+	position: static;
+}
+
+.toolbar_header{
+	display: block;
+}
+.toolbar_header.hiddent{
+	display: none;
+}
+
+
+.mini_toolbar{
+	padding-left:10px;
+}
+.toolbar_icon{
+	color:#818181;
+}
+
+.danger{
+	color:red!important;
+}
+
+.mdl-tabs__tab.mdl-js-ripple-effect{
+	background-color: #e0e0e0;
+}
+.mdl-tabs__tab.is-active{
+	background-color: white;
+}
+.mdl-layout__tab.is-active{
+	background-color: white;
+	color: black!important;
+}
+.hidden{
+	display:none;
+}
+
+.lookup_list_icon{
+  margin-left: 95%;
+}
+input.lookup{
+  width: 95%;
+}
+
+.compact_list_item{
+  opacity: 1
+}
+
+.center_form{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width:500px;
+	margin:0 auto;
+}
+
+
+.navigation .mdl-navigation__link .material-icons {
+  font-size: 24px;
+  margin-right:10px;
+}
+
+
+.mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
+    display: block;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+		padding-left: 5px;
+    margin: 0;
+}
