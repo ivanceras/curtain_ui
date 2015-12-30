@@ -1,6 +1,6 @@
 
-//var default_db_url = "postgres://atperknxxnjadk:jpasCIjuPd3MW48DUnb579-imU@ec2-23-21-140-156.compute-1.amazonaws.com:5432/dd2fbo2kj0q9l"; //heroku
-var default_db_url = "postgres://postgres:p0stgr3s@localhost:5432/bazaar_v7"; //local db
+var default_db_url = "postgres://atperknxxnjadk:jpasCIjuPd3MW48DUnb579-imU@ec2-23-21-140-156.compute-1.amazonaws.com:5432/dd2fbo2kj0q9l"; //heroku
+//var default_db_url = "postgres://postgres:p0stgr3s@localhost:5432/bazaar_v7"; //local db
 
 var session_db_url = sessionStorage.getItem('db_url');
 var session_db_url = session_db_url ? session_db_url : default_db_url;
