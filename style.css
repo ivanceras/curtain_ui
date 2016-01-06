@@ -17,7 +17,7 @@ table > tbody > tr.field_group > td {
 /*the tabs is left justified with an underline*/
 .left_justified{
 	justify-content: flex-start;
-	border-bottom: 1px solid #a0a0a0!important;
+	/*border-bottom: 1px solid #a0a0a0!important;*/
 	/*width: 600px;*/
 	/*background-color: #f0f0f0;*/
 }

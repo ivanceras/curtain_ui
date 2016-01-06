@@ -142,21 +142,6 @@ var FieldRow = {
 }
 
 
-var CompactWindowTabList = {
-
-    controller: function(arg){
-				var table = arg.table;
-				return {window: Window.table(table), table:table};
-    },
-
-    view: function(ctrl){
-			var table = ctrl.table;
-			var window = ctrl.window();
-			return m.component(WindowTab, {tab: window.tab, list_view:true, compact:true});
-    }
-
-}
-
 
 /// the unit component of the UI
 var Field = {
@@ -166,11 +151,7 @@ var Field = {
 	},
 
 	view: function(ctrl){
-			if (!ctrl.list_view){
-				return Field.single_row_view(ctrl.field, ctrl.dao, ctrl.index);
-			}else{
-				return Field.list_view(ctrl.field, ctrl.dao, ctrl.index);
-			}
+		return Field.list_view(ctrl.field, ctrl.dao, ctrl.index);
 	},
 
 	get_field_id: function(field, index){
@@ -277,7 +258,7 @@ var Field = {
 			function drop_down_content(arg){
 					var table = arg.table;
 					return m("ul.mdl-menu.mdl-menu--bottom-right.mdl-js-menu.mdl-js-ripple-effect", {for:field_id, config:upgrade}, [
-						m.component(CompactWindowTabList, {table:table})
+						m.component(MenuContent, {table:table})
 					])
 			}
 
@@ -317,31 +298,11 @@ var Field = {
 		return field_content;
 	},
 
-	single_row_view: function(field, dao, index){
-		var value = dao ? dao[field.column] : "";
-		var field_content = Field.get_field_content({field:field, value:value, editable:true, index:index});
-		return m("td", field_content)
-
-	},
-
-
 
 	list_view: function(field, dao, index){
 		var value = dao[field.column];
 		var field_content = Field.get_field_content({field:field, value: value, editable:false, index:index});
 		return m("td.mdl-data-table__cell--non-numeric", field_content)
-	},
-
-	editable_list_view: function(field){
-		return m("td.records.mdl-data-table__cell--non-numeric",
-					m(".mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label", {config: upgrade},
-							[
-								m("input.mdl-textfield__input ", {type:'text', id: field.complete_name, value:""}),
-								m("label.mdl-textfield__label", {for:field.complete_name}, field.name),
-								(field.description ? m(".mdl-tooltip.mdl-tooltip--large", {for:field.complete_name, config: upgrade}, field.description) : "")
-							]
-						)
-				);
 	},
 
 

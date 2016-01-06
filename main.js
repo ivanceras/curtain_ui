@@ -88,22 +88,10 @@ var WindowList = {
     view: function(ctrl){
       return m(".mdl-layout.mdl-js-layout.mdl-layout--fixed-drawer.mdl-layout--overlay-drawer-button.mdl-shadow--16dp",  {config: upgrade},
         [
-           /*
-           m("header.mdl-layout__header", [
-                m(".mdl-layout__header-row", [
-                      m("span.mdl-layout-title", "Curtain UI"),
-                      m(".mdl-layout-spacer"),
-                      m("nav.mdl-navigation", [
-                          m("a.mdl-navigation__link[href='/']", {config: m.route}, "Home"),
-                          m("a.mdl-navigation__link[href='/new']", {config: m.route}, "New connection"),
-                          m("a.mdl-navigation__link[href='/dc']",{config: m.route}, "Disconnect"),
-                      ])
-                ])
-            ]),*/
             WindowList.window_listing(ctrl),
-            m("main.mdl-layout__content", {id:"main_content", onscroll:function(){console.log("scrolled...");check_toolbar()}},
+            m("main.mdl-layout__content", {id:"main_content", onscroll:check_toolbar},
                 [
-                  m.component(WindowDetail, {list_view:ctrl.list_view, compact: ctrl.compact}),
+                  m.component(WindowContent, {list_view:ctrl.list_view, compact: ctrl.compact}),
                 ]
             )
         ]);
@@ -140,7 +128,7 @@ var Home = {
                     m("a", {href:"/window", config:m.route}, "Go to windows"),
                     m("br"),
                     m("a", {href:"/new", config:m.route}, "Connect to a server"),
-                    m("p", "version 0.0.3")
+                    m("p", "version 0.0.4")
                 ]);
     }
 }

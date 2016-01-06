@@ -8,7 +8,9 @@ The client side for admin ui for postgresql
 * getmdl.io
 * font-awesome
 
+## Online Demo
 
-## To see it action
+https://curtain-ui.herokuapp.com/?/new
 
-python -m SimpleHttpServer 8282
+
+
